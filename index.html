@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid black;
+            resize: vertical;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            resize: vertical;
+
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: left;
+        }
+
+        input[type="submit"]:hover {
+            background-color: red;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        .B1 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .B2 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .B1,
+            .B2,
+            input[type="submit"] {
+
+                margin-top: 0;
+
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="B1">
+                    <label for="lname" name="First Name"> First Name:</label>
+                </div>
+                <div class="B2">
+                    <input type="text" name="fname" id="firstname" placeholder="Enter your First Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="lname"> Last Name:</label>
+                </div>
+                <div class="B2">
+                    <input type="text" name="lname" id="lastname" placeholder="Enter Your Last Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Email"> Email:</label>
+                </div>
+                <div class="B2">
+                    <input type="email" name="email" id="email" placeholder="it should contain @,.">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Mobile"> Mobile:</label>
+                </div>
+                <div class="B2">
+                    <input type="tel" name="number" id="number" placeholder="only 10 digits are allowed">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Gender">Gender:</label>
+                </div>
+                <div class="B2">
+                    <input type="radio" id="gender" name="gender" value="Male">Male
+                    <input type="radio" id="gender" name="gender" value="Female">Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Dob">Date of Birth:</label>
+                </div>
+                <div class="B2">
+                    <input type="date" name="dob" id="dob">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="B1">
+                    <label for="Address">Address:</label>
+                </div>
+                <div class="B2">
+                    <textarea name="Address" id="Address" style="height: 200px;"></textarea>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="City">City:</label>
+                </div>
+                <div class="B2">
+                    <input type="text" name="City" id="City">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Pin">Area PIN: </label>
+                </div>
+                <div class="B2">
+                    <input type="tel" name="Pin" id="Pin">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="B1">
+                    <label for="State">State:</label>
+                </div>
+                <div class="B2">
+                    <input type="text" name="State" id="State">
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Qualification">Qualification:</label>
+                </div>
+                <div class="B3">
+                    <select name="Qualification" id="Qualification">
+                        <option value="">Select the Qualification</option>
+                        <option value="">Bachelor of Enginnering-B.E</option>
+                        <option value="">Bachelor of Arts</option>
+                        <option value="">Master of Arts</option>
+                        <option value="">Dipoloma</option>
+                        <option value="">MBA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Specialization">Specialization:</label>
+                </div>
+                <div class="B2">
+                    <input type="checkbox" name="Computer" id="Computer">Computer Science
+                    <input type="checkbox" name="information" id="information">Information Technology
+                    <input type="checkbox" name="Computer" id="computer">Computer Architecture
+                    <input type="checkbox" name="tele" id="tele">Tele Communication
+                </div>
+            </div>
+            <div class="row">
+                <div class="B1">
+                    <label for="Password">Password:</label>
+                </div>
+                <div class="B2">
+                    <input type="password" name="password" id="password">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Registered">
+
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
